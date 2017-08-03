@@ -1,0 +1,33 @@
+<div class="loading-overlay" #loadingElement style="opacity: 100;">
+    <md-spinner *ngIf="httpRequestFlag"></md-spinner>
+</div>
+
+<div class="evidence">
+    <h4> Edit Evidence </h4>
+
+<form [formGroup]="addNewEvidence">
+    <div class="form">
+    <md-input-container class="eachInput">
+        <input mdInput placeholder="Evidence Title:" formControlName="evidenceTitle">
+    </md-input-container>
+    </div>
+
+
+    <div class="form">
+    <md-input-container class="eachInput">
+        <textarea mdInput placeholder="Evidence Description:" formControlName="evidenceDescription"></textarea>  
+    </md-input-container>
+    </div>
+
+    <div class="form">
+    <md-input-container class="eachInput">
+        <textarea mdInput placeholder="Evidence Reference: (provide internet link)" formControlName="evidenceReference"></textarea>
+        <!-- <control-messages [control]="addNewEvidence.controls.evidenceReference"></control-messages>  -->
+    </md-input-container>
+    </div>
+    
+    <button md-button md-dialog-close>Cancel</button>
+    <button md-button [disabled]="!addNewEvidence.valid" (click)="createUpdateEvidence()">Submit</button>
+</form>
+
+</div>

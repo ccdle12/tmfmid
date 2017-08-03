@@ -1,0 +1,15 @@
+ <div class="topSurveyModuleNav">
+    <img  class="emailIcon" (click)="emailBenchmarkData()" src="../../../assets/Email Document-100-black.png">
+</div>
+
+<div class="container">
+  <div class="row">
+    <p-dropdown id="dropDownMenu" [options]="allCityNames" [(ngModel)]="currentCitySelected" (onChange)="cityHasChanged()" [style]="{'width':'250px'}"></p-dropdown>
+
+    <h3><strong>{{currentCitySelected ? currentCitySelected.name : ''}}</strong></h3>
+
+    <div class="googleComboChart" *ngFor="let eachChart of comboCharts, let i = index">
+        <google-chart [data]="comboCharts[i]"></google-chart>
+  </div>
+  </div>
+</div>

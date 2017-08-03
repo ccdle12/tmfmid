@@ -1,0 +1,14 @@
+#toggleUserRole {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    margin-top: 20px;
+    /* width: 200px; */
+}
+
+md-button-toggle {
+    width: 150px;
+    text-align: center;
+}

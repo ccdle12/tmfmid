@@ -1,0 +1,87 @@
+md-card {
+    height: 100px;
+    width: 150px;
+    margin: 0 0 25px 10px;
+    position:relative;
+    background-color: rgb(230, 230, 230);
+}
+
+md-card:hover {
+    cursor: pointer;
+}
+
+.progressBox {
+    float: right;
+    width: 80px;
+    height: 25px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-top: 3px;
+    padding-right: 5px;
+}
+
+#cardsContainer {
+    text-align:center;
+    margin-top: 5px;
+}
+
+.example-h2 {
+  margin: 10px;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+
+#surveyProgressBarArea {
+    position: relative;
+    margin-top: 0px;
+    background-color: rgb(220,220,220);
+    height: 140px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    position:absolute;
+    margin: 0;
+    margin-left: 100px;
+    padding-top: 25px;
+}
+
+#overallProgress {
+    position: absolute;
+    margin: 0;
+    margin-top: 70px; 
+    top:0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    text-align: center; 
+    
+}
+
+#progressBar {
+    position: absolute;
+    margin-top: 120px; 
+    top:0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;  
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center; 
+    opacity: 1;
+}
+
+
+

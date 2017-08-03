@@ -1,0 +1,18 @@
+<div id="welcomeComponent">
+    <div id="smartCityPerson"><img src="assets/DMMPersonEdit.png" width="300" alt="Picture of Smart City Person"/></div>
+    <div><img id="tmForumBanner" src="assets/DMMLogo.png"   alt="Banner for smart city"/></div>
+    <div><img id="sloganBanner" src="assets/AppForDigitalTransformers.png" alt="slogan banner"/></div>
+
+<div class="btn-group btn-group-justified navigationButtons">
+      <!-- <a routerLink="/main" id="seeDemo" class="btn"><h4>See Demo</h4></a>   -->
+    <a *ngIf="!authService.isAuthenticated()" class="btn orangeBtn" routerLink="/registration"><h4>Register My Interest</h4></a>
+    <!--<a *ngIf="authService.isAuthenticated()" (click)="openDialog()" class="btn defaultBtn">Register My Interest</a>-->
+
+    <a *ngIf="!authService.isAuthenticated()" (click)="authService.login()" class="btn defaultBtn"><h4>Login</h4></a>
+</div>
+
+<div id="togetherAndSponsorArea">
+    <img id="togetherAssetBanner" class="centerPosition" src="assets/TogetherText.png" width = "700"/>
+    <img class="dmmPartners" src="assets/DMMPartnersColor.png" />
+</div>
+</div>

@@ -1,0 +1,44 @@
+<!-- <div class="container"> -->
+    <!-- <div class="row"> -->
+
+<div class="loading-overlay" #loadingElement style="opacity: 100;">
+    <md-spinner *ngIf="httpRequestFlag"></md-spinner>
+</div>
+
+        <h3>{{userName}}</h3>
+        <h4>{{userJobTitle}}</h4>
+        <h4>{{userEmail}}</h4>
+
+        <div> Role: (to change select a new role and touch 'Change Role')</div>
+
+        <md-button-toggle-group id="toggleUserRole" #group="mdButtonToggleGroup" value="{{userRole}}">
+            <md-button-toggle value="Leader" (click)="updateUserRole('Leader')">
+                <div>Leader</div>
+            </md-button-toggle>
+            <md-button-toggle value="Consultant" (click)="updateUserRole('Consultant')">
+                <div>Consultant</div>
+            </md-button-toggle>
+            <md-button-toggle value="Evidencer" (click)="updateUserRole('Evidencer')">
+                <div>Evidencer</div>
+            </md-button-toggle>
+            <md-button-toggle value="Team" (click)="updateUserRole('Team')">
+                <div>Team</div>
+            </md-button-toggle>
+        </md-button-toggle-group>
+
+        <div><strong>Leader</strong> - The 'Leader' manages the whole process from 'Gather The Team', through to 'Publish Results'.
+            This person has the ability to change the overall result.</div>
+
+        <div><strong>Consultant</strong> - The 'Team Leader' can delegate responsibility to a 'Consultant' who can do everything the Team Leader can do.</div>
+        
+        <div><strong>Evidencer</strong> - An 'Evidencer' gathers local evidence about progress in your organization's Project, and enteres it into the App,
+            before the wider team takes part. They can only see their own results from the survey.</div>
+
+        <div><strong>Team</strong> - The 'Team' takes the survey. They can see their own results, but other members', thereby encouraging them to a come to a
+            organization-stakeholder workshp[ to discuss overall progress and 2 year targets.</div>
+   
+        
+        <button md-button md-dialog-close>Cancel</button>
+        <button md-button (click)="changeUserRole()">Change Role</button>
+    <!-- </div> -->
+<!-- </div> -->

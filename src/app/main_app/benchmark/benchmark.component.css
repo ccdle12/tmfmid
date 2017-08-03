@@ -1,0 +1,18 @@
+.topSurveyModuleNav {
+    position: relative; 
+    margin-top: 0px;
+    background-color:rgb(220,220,220);
+    height: 80px;
+    margin-bottom: 25px;
+    /* margin-bottom: 0px; */
+}
+
+.emailIcon  {
+    height: auto;
+    width: 50px;
+    margin-top: 15px;
+    opacity: 1;
+    float: left;
+    margin-left: 35px;
+    cursor: pointer;
+}

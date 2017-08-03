@@ -1,0 +1,17 @@
+control-messages {
+    color: red;
+}
+
+#submitButton {
+    /*margin-top: 25px;*/
+    margin-bottom: 25px;
+}
+
+input {
+    margin-bottom: 30px;
+}
+
+#userDetail {
+    height: 150px;
+    /*width: 1px;*/
+}

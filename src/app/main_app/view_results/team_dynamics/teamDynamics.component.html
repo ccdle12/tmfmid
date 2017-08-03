@@ -1,0 +1,43 @@
+<nav md-tab-nav-bar>
+
+<div id="navigationIcon">
+  <img id="backToDashboard" src="../../../assets/Back To-100-white.png" (click)="backToDashboard()">
+  <img id="emailDocument" src="../../../assets/Email Document-100-white.png" (click)="requestSurveyCSV()" *ngIf="this.authService.isLeaderConsultant();">
+</div>
+
+  <div class="container">
+  <div class="row">
+  <a md-tab-link class="navTitle" (click)="routeToPage('myownresults')"><h4>My Own Results</h4></a>
+  <a md-tab-link class="navTitle" (click)="routeToPage('organizationresults')"><h4>Our Organization's Results</h4></a>
+  <a md-tab-link class="navTitle" [ngStyle]="inTeamDynamics()" (click)="routeToPage('teamdynamics')"><h4>Team Dynamics</h4></a>
+  </div>
+  </div>
+</nav>
+
+ <div id="areaNavigation">
+   <div class="container">
+     <div class="row">
+       <div id="graphContainer">
+          <a class="col-xs-2 graphNav" [ngStyle]="inCustomerSection()" (click)="updateSelectedArray('Customer')"><h4 class="graphHeading">Customer</h4></a>
+          <a class="col-xs-2 graphNav" [ngStyle]="inStrategySection()" (click)="updateSelectedArray('Strategy')"><h4 class="graphHeading">Strategy</h4></a>
+          <a class="col-xs-2 graphNav" [ngStyle]="inTechnologySection()" (click)="updateSelectedArray('Technology')"><h4 class="graphHeading">Technology</h4></a>
+          <a class="col-xs-2 graphNav" [ngStyle]="inOperationsSection()" (click)="updateSelectedArray('Operations')"><h4 class="graphHeading">Operations</h4></a>
+          <a class="col-xs-2 graphNav" [ngStyle]="inCultureSection()" (click)="updateSelectedArray('Culture')"><h4 class="graphHeading">Culture</h4></a>
+        </div>
+      </div>
+   </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <h3><strong>{{selectedAreaString}}</strong></h3>
+  </div>
+</div>
+
+  <div id="candleStickChart" class="googleComboChart container" *ngFor="let eachDimension of selectedAreaArray, let i = index">
+      <div class="container">
+        <div><h5><strong>{{getGraphTitles(i + currentGraphTitleIndex)}}</strong></h5></div>
+        <div id="candle_chart" [chartData]="eachDimension" [chartOptions] = "candle_ChartOptions" chartType="CandlestickChart" GoogleChart></div>
+      </div> 
+  </div>
+<div class="marginBottom"></div>

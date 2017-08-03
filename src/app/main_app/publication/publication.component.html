@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="publicationContainers">
+        <h3>Set Publication Level</h3>
+        <p>
+            The more open you are, the more everyone benefits. Select a publication level to find out how it works,
+            then make your choice. You can make your publication level more open at a later date, but you cannot
+            make it less open.
+        </p>
+
+        <div class="container">
+            <div class="row">
+                <div class="publicationSelection col-sm-1 col-xs-12" (click)="setPublicationLevel('Open')" [ngStyle]="openLevel()"><h3 class="selectionLabel">Open</h3></div>
+                <div class="publicationSelection col-sm-1 col-xs-12" (click)="setPublicationLevel('Open within Group')" [ngStyle]="openWithinGroupLevel()"><h3 class="selectionLabel">Open within Group</h3></div>
+                <div class="publicationSelection col-sm-1 col-xs-12" (click)="setPublicationLevel('Anonymous')" [ngStyle]="anonymousLevel()"><h3 class="selectionLabel">Anonymous</h3></div>
+                <div class="publicationSelection col-sm-1 col-xs-12" (click)="setPublicationLevel('Closed')" [ngStyle]="closedLevel()"><h3 class="selectionLabel">Closed</h3></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="publicationContainers">
+        <h3>Publish Your Survey</h3>
+        <p>
+            Publish your survey when your team has completed the survey and after you have held a workshop to, if necessary,
+            modify the results using 'adjust aggregates'. This will finalize the survey and you will be able to view this via
+            the benchmark page. Your selected level of openness will determine whether you can also view other organization's
+            results as well as the global benchmark. Following publication your organization will be readied for a new survey
+            and all user's data will be returned to a starting position.
+        </p>
+        <div class="row">
+            <button md-button class="col-xs-12" id="publishBtn" (click)="publishVersion()"><h3>Publish Now</h3></button>
+        </div>
+    </div>
+
+    <div class="marginBottom"></div>
+</div>

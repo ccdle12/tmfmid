@@ -1,0 +1,74 @@
+nav {
+    /* position: relative; */
+}
+
+.navContainer {
+    position: relative;
+}
+
+.userDetails {
+    color: white; 
+    position: absolute; 
+    top:0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    text-align: center; 
+    padding-top: 10px;
+
+}
+
+#logo {
+    height: auto;
+    width: 125px;
+    margin-left: 30px;
+    margin-right: 350px;
+    margin-top: 5px;
+    z-index: 10;
+}
+
+.img-circle {
+    border-radius: 50%;
+    height: 35px;
+    margin-right: 50px;
+    margin-top: 5px;
+    float: right;
+    z-index: 10;
+}
+
+ #menuIcon { 
+    color: white;
+    padding-top: 5px;
+    margin: 0px;
+    margin-top: 7px;
+    z-index: 10;
+    float: right;   
+}
+
+#firstMenuButton {
+    margin-top: 37px;
+}
+
+.navbar {
+    border-radius: 0 !important;
+    margin-bottom: 0;
+}
+
+
+#infoIcon {
+    position: absolute;
+    height: 0 auto;
+    width: 60px;
+    left: 0;
+    padding-left: 25px;
+    padding-top: 15px;
+}
+
+#infoIcon:hover {
+    cursor: pointer;
+}
+
+#termsOfUse {
+    padding-top: 15px;
+}
+

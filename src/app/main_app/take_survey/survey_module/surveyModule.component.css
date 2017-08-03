@@ -1,0 +1,57 @@
+a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.example-container{
+     width: 500px;
+  height: 100vh;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+#backToDashboard {
+    height: auto;
+    width: 38px;
+    margin-top: 5px;
+    opacity: 1;
+    float: left;
+    margin-right: 25px;
+}
+
+#backToDashboard:hover {
+    cursor: pointer;
+}
+
+/*Nav Bar*/
+nav  {
+    text-align:center;
+    /*margin-top: 50px;*/
+     background-color: #88C158;
+     position: relative;
+}
+
+#navigationIcon {
+    position:absolute;
+    padding-left: 20px;
+}
+
+nav a {
+    /*background-color: darkgrey;*/
+    color:white;
+    opacity: 1;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+.navTitle {
+    padding-top: 5px;
+}
+
+

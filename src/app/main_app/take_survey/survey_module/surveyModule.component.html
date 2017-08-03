@@ -1,0 +1,19 @@
+<!--<div class="topMarginForSurveyModules"></div>-->
+<nav md-tab-nav-bar>
+  <div id="navigationIcon">
+    <img id="backToDashboard" src="../../../assets/Back To-100-white.png" (click)="backToDashboard()">
+  </div>
+
+  <div class="container">
+    <a md-tab-link  class="navTitle" [ngStyle]="inSurvey()" (click)="routeToPage('survey')"><h4>Survey</h4></a>
+     <!-- <a md-tab-link class="navTitle" [ngStyle]="inEvidence()"  *ngIf="!authService.inDemoMode() && authService.isLeaderConsultant()" (click)="routeToPage('evidence')"><h4>Evidence</h4></a> -->
+     <!-- <a md-tab-link class="navTitle" [ngStyle]="inEvidence()" *ngIf="!authService.isVerified()"><h4>Evidence</h4></a>   -->
+    <!--<a md-tab-link [ngStyle]="activeBackgroundColor()" *ngIf="!authService.inDemoMode()" (click)="routeToPage('bestPractice')">Best Practice</a>-->
+    <!--<a md-tab-link *ngIf="authService.inDemoMode()">Best Practice</a>-->
+    <!--<a md-tab-link [ngStyle]="activeBackgroundColor()" *ngIf="!authService.inDemoMode()" (click)="routeToPage('caseStudies')">Case Studies</a>-->
+    <!--<a md-tab-link *ngIf="authService.inDemoMode()">Case Studies</a>-->
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
+<!--<div class=-->

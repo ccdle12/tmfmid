@@ -1,0 +1,32 @@
+.publicationContainers {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 50px;
+    background-color: lightgrey;
+}
+
+.publicationSelection {
+    height: 200px;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 50px;
+    background-color: darkgrey;
+}
+
+.publicationSelection:hover {
+    cursor: pointer;
+}
+
+.selectionLabel {
+    margin-top: 80px; 
+    text-align: center;
+}
+
+#publishBtn {
+    margin-top: 50px;
+    padding-bottom: 10px;
+    background-color: pink;
+}

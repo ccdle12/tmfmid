@@ -1,0 +1,110 @@
+#welcomeComponent {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Sponsor Banner */
+#togetherAndSponsorArea {
+   padding-top: 25px; 
+}
+
+#togetherAssetBanner {
+  margin-left: auto; 
+	margin-right: auto; 
+  display: block; 
+}
+
+
+.dmmPartners {
+  margin-left: auto;
+	margin-right: auto;
+  display: block;
+}
+
+
+
+#smartCityPerson {
+  float: left;
+  margin-right: 70px; 
+  width: 250px;    
+  height: auto;
+  /*height: 100px;*/
+  /*display: inline-block;*/
+  /*overflow: hidden;*/
+  /*height: 100px;*/
+  /*width: auto;*/
+  /*transform: scale(1,1);*/
+}
+
+#tmForumBanner {
+  width: 700px; /* you can use % */
+  height: auto;
+  margin-top: 40px;
+  margin-bottom: 65px;
+}
+
+#sloganBanner {
+   width: 700px; 
+
+}
+
+#seeDemo {
+  background-color: #EEB242;
+}
+
+
+a:hover  {
+  color: white;
+}
+
+.dmmPartners {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+/* @media (max-width: 1100px) {
+  .dmmPartners {
+    width: 1000px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .dmmPartners {
+    width: 800px;
+  }
+}
+
+@media (max-width: 800px) {
+  .dmmPartners {
+    width: 600px;
+  }
+
+  #tmForumBanner {
+    width: 400px
+  }
+
+  #sloganBanner {
+    width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dmmPartners {
+    width: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  .dmmPartners {
+    width: 300px;
+  }
+
+  #tmForumBanner {
+    width: 300px
+  }
+
+  #sloganBanner {
+    width: 300px;
+  }
+} */

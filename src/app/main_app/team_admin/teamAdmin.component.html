@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <button *ngIf="this.authService.isVerified()" id="addNewUser" md-mini-fab class="col-xs-3" color="primary" (click)="addNewUser()" mdTooltip="Add a new user"><md-icon>add</md-icon></button>
+    </div>
+
+    <div class="row"  id="cardsContainer">
+     <md-card class="col-sm-1" *ngFor="let userProfile of userProfiles; let i = index">
+        <img class="roundImage reduceImageSize" [src]="userProfile.picture"/>
+        
+        <div class="cardBody">
+            <h5><strong>{{getUsersName(i)}}</strong></h5>
+            <h6>{{userProfile.app_metadata.user_role}}</h6>
+
+        
+            <md-card-content>
+                <h6>{{getUsersTitle(i)}}</h6>
+                <h6>{{userProfile.email}}</h6>
+            </md-card-content>
+            
+            <md-card-actions>
+                <button (click)="editUserRole(i)" md-button>Edit Role</button>
+                <button (click)="deleteUser(i)" id="deleteButton" md-button>Delete</button>
+            </md-card-actions>
+        </div>
+     </md-card>
+    </div>
+</div>
+
+
+
+

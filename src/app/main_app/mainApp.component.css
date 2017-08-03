@@ -1,0 +1,20 @@
+nav  {
+    text-align:center;
+    /*background-color: white;*/
+    background-color: #88C158;
+}
+
+nav a {
+    /*background-color: darkgrey;*/
+    color: white;
+    opacity: 1;
+}
+
+
+.navTitle {
+    padding-top: 5px;
+}
+
+a {
+    text-decoration: none;
+}

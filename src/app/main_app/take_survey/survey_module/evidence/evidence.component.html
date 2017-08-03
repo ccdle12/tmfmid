@@ -1,0 +1,19 @@
+<div class="bodyTopMarginSurveyModules"></div>
+<div class="container">
+
+<h1>Evidence</h1>
+<h3>{{currentDimension}}</h3>
+
+<button id="provideEvidence" md-mini-fab class="col-xs-3" color="primary" (click)="launchEvidenceDialog()" mdTooltip="Provide new evidence"><md-icon>add</md-icon></button>
+<div class="row" id="cardsContainer">
+<md-card class="col-sm-2" *ngFor="let evidence of evidence; let i = index">
+        <md-card-title>{{evidence.evidenceDescription}}</md-card-title>
+        <md-card-content>
+            <a (click)="routeToEvidenceLink(i)"><p>{{evidence.evidenceText}}</p></a>
+            <!-- <a target="_blank" href="{{evidence.evidenceText}}"><p>{{evidence.evidenceText}}</p></a> -->
+            <button md-button class="col-sm-12" (click)="launchEditEvidenceDialog(i)">Edit</button>
+            <button md-button class="col-sm-12" (click)="launchDeleteEvidenceDialog()">Delete</button>
+        </md-card-content>
+</md-card>
+</div>
+</div>

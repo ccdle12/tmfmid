@@ -1,0 +1,33 @@
+<div class="loading-overlay" #loadingElement style="opacity: 100;">
+    <md-spinner *ngIf="httpRequestFlag"></md-spinner>
+</div>
+
+<div class="container">
+    <h3><strong>Adjust Survey Aggregates</strong></h3>
+    
+        <div class="row">
+        <span class="col-sm-2 col-sm-offset-4"><strong>IMPORTANCE</strong></span>
+        <span class="col-sm-2"><strong>AS-IS CAPABILITY</strong></span>
+        <span class="col-sm-2"><strong>2 YEAR TARGET</strong></span>
+    </div> 
+
+
+    
+    <div class="row sliders" *ngFor="let result of unAdjustedData; let i = index">
+        <span class="col-sm-4">{{result['dimensionID']}} {{result['dimensionText']}}</span>  
+
+         <span *ngIf="resetImportanceValHasIndex(i)" class="resetVal" (click)="setImportanceValToDefault(i)">Reset to {{getImportanceResetVal(i)}}</span> 
+        <span class="col-sm-2"><md-slider  min="1" max="5" step="1" value="1" tickInterval="1" [(ngModel)]="importanceValues[i]" (change)="importanceSliderChanged(i)"></md-slider> {{importanceValues[i]}}</span>  
+
+         <span *ngIf="resetScoreValHasIndex(i)" class="resetVal" (click)="setScoreValToDefault(i)">Reset to {{getScoreResetVal(i)}}</span>
+        <span class="col-sm-2"><md-slider min="1" max="5" step="1" value="1" tickInterval="1" [(ngModel)]="capabilityValues[i]" (change)="scoreSliderChanged(i)"></md-slider> {{capabilityValues[i]}}</span>   
+            
+
+         <span *ngIf="resetTargetValHasIndex(i)" class="resetVal" (click)="setTargetValToDefault(i)">Reset to {{getTargetResetVal(i)}}</span>
+        <span class="col-sm-2"><md-slider min="1" max="5" step="1" value="1" tickInterval="1" [(ngModel)]="twoYearTargetValues[i]" (change)="targetSliderChanged(i)"></md-slider> {{twoYearTargetValues[i]}}</span>  
+ 
+    </div>
+
+    <button md-button md-dialog-close>Cancel</button>
+    <button md-button (click)="sendSurveyRequest()">Save</button>
+</div> 

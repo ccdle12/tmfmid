@@ -1,0 +1,9 @@
+<div class="loading-overlay" #spinnerElement style="opacity: 1;">
+    <md-spinner  *ngIf="httpRequestFlag"></md-spinner>
+</div>
+
+<h4>Publication Level: {{selectedPubLevel}}</h4>
+<!-- <p id="publicationLevel" [textContent]="injectText()"></p> -->
+
+<button md-button md-dialog-close>Cancel</button>
+<button md-button (click)="updateCityPublicationLevel()">Set {{selectedPubLevel}}</button>
